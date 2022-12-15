@@ -60,6 +60,8 @@ jobs:
         mkdir -p $ANDROID_ROOT/.repo/local_manifests
         wget https://raw.githubusercontent.com/Halium/halium-devices/halium-7.1/manifests/"$VENDOR"_"$DEVICE".xml -O $ANDROID_ROOT/.repo/local_manifests/$DEVICE.xml
         repo sync -j8 -c --no-clone-bundle --no-tags
+        rm -rf $ANDROID_ROOT/hybris/hybris-boot
+        git clone https://github.com/sailfish-on-davinci/hybris-boot.git $ANDROID_ROOT/hybris/hybris-boot
     
     - name: Build HAL
       run: |
