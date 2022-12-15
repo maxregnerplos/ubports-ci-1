@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     env:
-      VENDOR: xiaomi
+      VENDOR: sony
       DEVICE: rolex
       ANDROID_ROOT: /home/runner/work/halium/
 
